@@ -27,12 +27,12 @@ namespace :deploy do                                # Default settings for Passe
  end
 
  task :symlink_shared do                            # Added task to link shared database.yml into current release. This protects any passwords etc in the file.
-#   run "ln -nfs #{shared_path}/db/production.sqlite3 #{release_path}/db/production.sqlite3"
+   run "ln -nfs #{shared_path}/db/production.sqlite3 #{release_path}/db/production.sqlite3"
  end
 end
 
 # ADDED TASK EXECUTION
-# after 'deploy:update_code', 'deploy:symlink_shared' # Run deploy:symlink_shared after running deploy:update_code
+after 'deploy:update_code', 'deploy:symlink_shared' # Run deploy:symlink_shared after running deploy:update_code
 
 
 # STUFF I DIDN'T USE
