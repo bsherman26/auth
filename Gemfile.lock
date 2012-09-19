@@ -127,6 +127,7 @@ DEPENDENCIES
   bcrypt-ruby
   capistrano
   coffee-rails (~> 3.2.1)
+  haml
   haml-rails
   jquery-rails
   rails (= 3.2.6)

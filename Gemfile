@@ -8,6 +8,7 @@ gem 'rails', '3.2.6'
 gem 'sqlite3'
 
 gem "bcrypt-ruby", :require => "bcrypt"
+gem "haml"
 
 group :development do
   gem 'haml-rails'
